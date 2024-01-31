@@ -1,0 +1,11 @@
+.img-class {
+    width: 20%;
+}
+.parent-img {
+    display: grid;
+    justify-content: start;
+}
+.parent-name, .parent-no {
+    display: flex;
+}
+
