@@ -28,12 +28,29 @@ import EditKeunggulan from "./components/CrudKeunggulan/EditKeunggulan";
 import ListFaq from "./components/ListFaq/ListFaq";
 import AddFaq from "./components/CrudFaq/AddFaq";
 import EditFaq from "./components/CrudFaq/EditFaq";
+import ListKota from "./components/ListKota/ListKota";
+import AddKota from "./components/CrudKota/AddKota";
+import EditKota from "./components/CrudKota/EditKota";
+import ListSekolah from "./components/ListSekolah/ListSekolah";
+import AddSekolah from "./components/CrudSekolah/AddSekolah";
+import EditSekolah from "./components/CrudSekolah/EditSekolah";
+import ListPilihanProgram from "./components/ListPilihanProgram/ListPilihanProgram";
+import AddPilihanProgram from "./components/CrudPilihanProgram/AddPilihanProgram";
+import EditPilihanProgram from "./components/CrudPilihanProgram/EditPilihanProgram";
+import ListFiturProgram from "./components/ListFiturProgram/ListFiturProgram";
+import AddFiturProgram from "./components/CrudFiturProgram/AddFiturProgram";
+import EditFiturProgram from "./components/CrudFiturProgram/EditFiturProgram";
+import ListPromo from "./components/ListPromo/ListPromo";
+import AddPromo from "./components/CrudPromo/AddPromo";
+import EditPromo from "./components/CrudPromo/EditPromo";
+import Home from "./Frontend/Home";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Login />}></Route>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route exact path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         {/* List Admin */}
         <Route path="/dashboard/listwa" element={<ListWa />}></Route>
@@ -45,6 +62,11 @@ function App() {
         <Route path="/dashboard/listreservasi" element={<ListReservasi />}></Route>
         <Route path="/dashboard/listkeunggulan" element={<ListKeunggulan />}></Route>
         <Route path="/dashboard/listfaq" element={<ListFaq />}></Route>
+        <Route path="/dashboard/listkota" element={<ListKota />}></Route>
+        <Route path="/dashboard/listsekolah" element={<ListSekolah />}></Route>
+        <Route path="/dashboard/listpilihanprogram" element={<ListPilihanProgram />}></Route>
+        <Route path="/dashboard/listfiturprogram" element={<ListFiturProgram />}></Route>
+        <Route path="/dashboard/listpromo" element={<ListPromo />}></Route>
         {/* Add Admin */}
         <Route path="/addcontact" element={<AddUser />}></Route>
         <Route path="/addprogram" element={<AddProgram />}></Route>
@@ -55,6 +77,11 @@ function App() {
         <Route path="/addreservasi" element={<AddReservasi />}></Route>
         <Route path="/addkeunggulan" element={<AddKeunggulan />}></Route>
         <Route path="/addfaq" element={<AddFaq />}></Route>
+        <Route path="/addkota" element={<AddKota />}></Route>
+        <Route path="/addsekolah" element={<AddSekolah />}></Route>
+        <Route path="/addpilihanprogram" element={<AddPilihanProgram />}></Route>
+        <Route path="/addfiturprogram" element={<AddFiturProgram />}></Route>
+        <Route path="/addpromo" element={<AddPromo />}></Route>
         {/* Edit Admin */}
         <Route path="/edit-whatsapp/:id" element={<EditContact />}></Route>
         <Route path="/edit-program/:id" element={<EditProgram />}></Route>
@@ -64,6 +91,11 @@ function App() {
         <Route path="/edit-kelas/:id" element={<EditKelas />}></Route>
         <Route path="/edit-keunggulan/:id" element={<EditKeunggulan />}></Route>
         <Route path="/edit-faq/:id" element={<EditFaq />}></Route>
+        <Route path="/edit-kota/:id" element={<EditKota />}></Route>
+        <Route path="/edit-sekolah/:id" element={<EditSekolah />}></Route>
+        <Route path="/edit-pilihanprogram/:id" element={<EditPilihanProgram />}></Route>
+        <Route path="/edit-fiturprogram/:id" element={<EditFiturProgram />}></Route>
+        <Route path="/edit-promo/:id" element={<EditPromo />}></Route>
       </Routes>
     </BrowserRouter>
   );

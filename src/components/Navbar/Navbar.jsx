@@ -54,6 +54,26 @@ const Navbar = () => {
   const goToFaq = () => {
     navigate("/dashboard/listfaq")
   }
+  
+  const goToKota = () => {
+    navigate("/dashboard/listkota")
+  }
+
+  const goToSekolah = () => {
+    navigate("/dashboard/listsekolah")
+  }
+
+  const goToPilihanProgram = () => {
+    navigate("/dashboard/listpilihanprogram")
+  }
+
+  const goToFiturProgram = () => {
+    navigate("/dashboard/listfiturprogram")
+  }
+
+  const goToPromo = () => {
+    navigate("/dashboard/listpromo")
+  }
 
   const Logout = async () => {
     try {
@@ -94,12 +114,12 @@ const Navbar = () => {
                 <em className="em-style">Reservasi</em>
               </a>
             </li>
-            <li>
+            <li onClick={() => goToPilihanProgram()}>
               <a className="s-sidebar__nav-link">
-                <em className="em-style">Jumbotron</em>
+                <em className="em-style">Pilihan Program</em>
               </a>
             </li>
-            <li>
+            <li onClick={() => goToFiturProgram()}>
               <a className="s-sidebar__nav-link">
                 <em className="em-style">Fitur Program</em>
               </a>
@@ -109,7 +129,7 @@ const Navbar = () => {
                 <em className="em-style">Fitur Layanan</em>
               </a>
             </li>
-            <li>
+            <li onClick={() => goToPromo()}>
               <a className="s-sidebar__nav-link">
                 <em className="em-style">Promo</em>
               </a>
@@ -129,7 +149,7 @@ const Navbar = () => {
                 <em className="em-style">Kelas/Kota</em>
               </a>
             </li>
-            <li>
+            <li onClick={() => goToKota()}>
               <a className="s-sidebar__nav-link">
                 <em className="em-style">Kota</em>
               </a>
@@ -159,7 +179,7 @@ const Navbar = () => {
                 <em className="em-style">Keunggulan</em>
               </a>
             </li>
-            <li>
+            <li onClick={() => goToSekolah()}>
               <a className="s-sidebar__nav-link">
                 <em className="em-style">Asal Sekolah</em>
               </a>
