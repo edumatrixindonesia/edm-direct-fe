@@ -14,7 +14,7 @@ const Register = () => {
   // const dispatch = useDispatch()
 
   const goToLogin = () => {
-    navigate("/");
+    navigate("/login");
   };
 
   const Register = async (e) => {
