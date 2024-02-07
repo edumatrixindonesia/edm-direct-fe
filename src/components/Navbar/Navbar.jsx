@@ -75,6 +75,10 @@ const Navbar = () => {
     navigate("/dashboard/listpromo")
   }
 
+  const goToKelasPerKota = () => {
+    navigate("/dashboard/listkelasperkota")
+  }
+
   const Logout = async () => {
     try {
       await axios.delete("http://localhost:8000/logout");
@@ -144,7 +148,7 @@ const Navbar = () => {
                 <em className="em-style">Kelas</em>
               </a>
             </li>
-            <li>
+            <li onClick={() => goToKelasPerKota()}>
               <a className="s-sidebar__nav-link">
                 <em className="em-style">Kelas/Kota</em>
               </a>

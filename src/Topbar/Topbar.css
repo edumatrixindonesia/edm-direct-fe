@@ -34,7 +34,7 @@ a {
 }
 /* LOGO */
 .logo {
-  width: 6%;
+  width: 13%;
 }
 /* NAVBAR MENU */
 .menu {
@@ -113,7 +113,10 @@ font-family: "Lexend", sans-serif;
   font-weight: 500;
   border-radius: 3px;
   margin-left: 10px;
-  border-radius: 0 50px 50px 0;
+  /* border-radius: 0 50px 50px 0; */
+  border-radius: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   cursor: pointer;
 }
 .nav-kelas {

@@ -44,11 +44,17 @@ import ListPromo from "./components/ListPromo/ListPromo";
 import AddPromo from "./components/CrudPromo/AddPromo";
 import EditPromo from "./components/CrudPromo/EditPromo";
 import Home from "./Frontend/Home";
+import ListKelasperKota from "./components/ListKelasperKota/ListKelasperKota";
+import AddKelasperKota from "./components/CrudKelasperKota/AddKelasperKota";
+import Kotapage from "./Frontend/Kotapage/Kotapage";
+import Kelaspage from "./Frontend/Kelaspage/Kelaspage";
+import Mapelpage from "./Frontend/Mapelpage/Mapelpage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+      {/* <Route exact path="/" element={<Ambonpage />}></Route> */}
         <Route exact path="/" element={<Home />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
@@ -67,6 +73,7 @@ function App() {
         <Route path="/dashboard/listpilihanprogram" element={<ListPilihanProgram />}></Route>
         <Route path="/dashboard/listfiturprogram" element={<ListFiturProgram />}></Route>
         <Route path="/dashboard/listpromo" element={<ListPromo />}></Route>
+        <Route path="/dashboard/listkelasperkota" element={<ListKelasperKota />}></Route>
         {/* Add Admin */}
         <Route path="/addcontact" element={<AddUser />}></Route>
         <Route path="/addprogram" element={<AddProgram />}></Route>
@@ -82,6 +89,7 @@ function App() {
         <Route path="/addpilihanprogram" element={<AddPilihanProgram />}></Route>
         <Route path="/addfiturprogram" element={<AddFiturProgram />}></Route>
         <Route path="/addpromo" element={<AddPromo />}></Route>
+        <Route path="/addkelasperkota" element={<AddKelasperKota />}></Route>
         {/* Edit Admin */}
         <Route path="/edit-whatsapp/:id" element={<EditContact />}></Route>
         <Route path="/edit-program/:id" element={<EditProgram />}></Route>
@@ -96,6 +104,12 @@ function App() {
         <Route path="/edit-pilihanprogram/:id" element={<EditPilihanProgram />}></Route>
         <Route path="/edit-fiturprogram/:id" element={<EditFiturProgram />}></Route>
         <Route path="/edit-promo/:id" element={<EditPromo />}></Route>
+        {/* Go City By ID */}
+        <Route path="/kota/:id" element={<Kotapage />}></Route>
+        {/* Go Class By ID */}
+        <Route path="/kelas/:id" element={<Kelaspage />}></Route>
+        {/* Go Mapel By ID */}
+        <Route path="/mata-pelajaran/:id" element={<Mapelpage />}></Route>
       </Routes>
     </BrowserRouter>
   );

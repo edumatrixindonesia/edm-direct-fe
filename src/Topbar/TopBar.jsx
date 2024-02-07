@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Topbar.css";
 import { useNavigate } from "react-router-dom";
+import logo from "../asset/logo edm.jpg"
 
 const Topbar = () => {
 //   const dispatch = useNavigate();
@@ -26,7 +27,7 @@ const Topbar = () => {
   return (
     <div className="App">
       <nav className="navbar-nav">
-        <img className="logo" src="" alt="" />
+        <img className="logo" src={logo} alt="" />
         <ul className="nav-links">
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" className="hamburger">
@@ -66,9 +67,9 @@ const Topbar = () => {
               </a>
             </li>
             <li className="li-btn">
-              <button className="btn-masuk">
+              {/* <button className="btn-masuk">
                 Masuk
-              </button>
+              </button> */}
               <button className="btn-daftar">
                 Daftar
               </button>
