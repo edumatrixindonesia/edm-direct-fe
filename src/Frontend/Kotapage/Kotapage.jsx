@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import Topbar from "../../Topbar/TopBar";
 import model from "../../asset/model.png";
 import Footer from "../Footer/Footer";
@@ -10,6 +10,7 @@ const Kotapage = () => {
   const [lokasi, setLokasi] = useState([]);
   const { id } = useParams();
   const [token, setToken] = useState("");
+  const [kabupaten, setKabupaten] = useState([]);
 
   // useEffect(() => {
   //   getKotaById();
@@ -43,12 +44,21 @@ const Kotapage = () => {
     };
     console.log(id);
     getLokasi(id);
-    // fetchKota()
+    fetchKabupaten();
   }, [id, query]);
 
   useEffect(() => {
     console.log(name);
   }, [name]);
+
+  const fetchKabupaten = () => {
+    fetch("http://localhost:8000/ibukotakab")
+      .then((res) => res.json())
+      .then((data) => {
+        setKabupaten(data);
+        console.log(data);
+      });
+  };
 
   return (
     <React.Fragment>
@@ -91,7 +101,29 @@ const Kotapage = () => {
             </div>
           </div>
         </div>
-        <Footer/>
+        {/* KABUPATEN */}
+        <div className="parent-title-kota">
+          <h3 className="title-jangkauan-kota">
+            Edumatrix Ada di Kota - Kota Berikut
+          </h3>
+          <p className="desk-jangkauan-kota">
+            Edumatrix Indonesia memberikan layanan belajar terbaik sekaligus
+            terdekat yang disesuaikan dengan lokasi siswa di seluruh Indonesia.
+            Pilihlah layanan belajar Edumatrix yang terdekat dari kotamu:
+          </p>
+          <div className="parent-list-kota">
+            {kabupaten.map((item, index) => (
+              <Link
+                to={`kabupaten/${item.slug.toLowerCase()}?data=${item.id}`}
+                className="btn-kota"
+                key={index}
+              >
+                {item.kota_kabupaten}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <Footer />
       </div>
     </React.Fragment>
   );

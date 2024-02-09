@@ -46,9 +46,9 @@ import EditPromo from "./components/CrudPromo/EditPromo";
 import Home from "./Frontend/Home";
 import ListKelasperKota from "./components/ListKelasperKota/ListKelasperKota";
 import AddKelasperKota from "./components/CrudKelasperKota/AddKelasperKota";
-import Kotapage from "./Frontend/Kotapage/Kotapage";
 import Kelaspage from "./Frontend/Kelaspage/Kelaspage";
 import Mapelpage from "./Frontend/Mapelpage/Mapelpage";
+import Kotapage from "./Frontend/Kotapage/kotaPage";
 
 function App() {
   return (
@@ -110,6 +110,8 @@ function App() {
         <Route path="/kelas/:id" element={<Kelaspage />}></Route>
         {/* Go Mapel By ID */}
         <Route path="/mata-pelajaran/:id" element={<Mapelpage />}></Route>
+        {/* Go Kabupaten By ID */}
+        <Route path="/kabupaten/:id"></Route>        
       </Routes>
     </BrowserRouter>
   );

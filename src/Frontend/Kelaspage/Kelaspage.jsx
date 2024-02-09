@@ -6,8 +6,8 @@ import model from "../../asset/model.png";
 import Footer from "../Footer/Footer";
 
 const Kelas = () => {
-  const [name, setName] = useState([]);
-  const [lokasi, setLokasi] = useState([]);
+  const [name, setName] = useState({});
+  const [promo, setPromo] = useState([]);
   const { id } = useParams();
   const [token, setToken] = useState("");
 
@@ -41,14 +41,27 @@ const Kelas = () => {
       );
       setName(response.data);
     };
+    const getPromo = async () => {
+      const response = await axiosJWT.get(
+        `http://localhost:8000/kelas/${query.get("data")}`,
+        {
+          headers: {
+            Authorization: `Bearer`,
+          },
+        }
+      );
+      setPromo(response.data);
+    };
     console.log(id);
     getKelas(id);
+    getPromo(id)
     // fetchKota()
   }, [id, query]);
 
   useEffect(() => {
     console.log(name);
-  }, [name]);
+    console.log("ini promo: ", promo);
+  }, [name, promo]);
 
   return (
     <React.Fragment>
@@ -90,6 +103,9 @@ const Kelas = () => {
               <img src={model} alt="" />
             </div>
           </div>
+        </div>
+        <div>
+          <img src={"http://localhost:8000/images/" + promo.image} alt="" />
         </div>
         <Footer />
       </div>

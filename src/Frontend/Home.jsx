@@ -3,10 +3,13 @@ import Topbar from "../Topbar/TopBar";
 import "./Home.css";
 import model from "../asset/model.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faCity, faSchool, faSearch } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Footer from "./Footer/Footer";
+import Faq from "./Faq/Faq";
+import sekolah1 from "../asset/logo sekolah1.png";
+import sekolah2 from "../asset/logo sekolah2.png";
 // import logosekolah from "../asset/logo sekolah.png"
 
 const Home = () => {
@@ -20,7 +23,7 @@ const Home = () => {
   const [keunggulan, setKeunggulan] = useState([]);
   const [sekolahSiswa, setSekolahSiswa] = useState([]);
   const [kelas, setKelas] = useState([]);
-  const [mapel, setMapel] = useState([])
+  const [mapel, setMapel] = useState([]);
 
   useEffect(() => {
     const loadPosts = async () => {
@@ -123,7 +126,7 @@ const Home = () => {
                   Les Privat Terbaik di Indonesia
                 </span>
               </h3>
-              <p>
+              <p className="p-hero-top">
                 Jasa Les Privat untuk TK, SD, SMP, SMA, UN/AKM, OSN, CPNS, LPDP,
                 PPDS, SIMAK UI, SNBT, AKPOL, AKMIL, Kedinasan, Mahasiswa dan
                 Karyawan. Dapatkan layanan Les Privat kapan pun dan dimana pun
@@ -237,6 +240,7 @@ const Home = () => {
                   className="btn-kota"
                   key={index}
                 >
+                  <FontAwesomeIcon icon={faCity} /> &nbsp;
                   {item.kota}
                 </Link>
               ))}
@@ -258,10 +262,11 @@ const Home = () => {
             <div className="parent-list-kota">
               {kelas.map((item, index) => (
                 <Link
-                  to={`kelas/${item.name.toLowerCase()}?data=${item.id}`}
-                  className="btn-kota"
+                  to={`kelas/${item.slug.toLowerCase()}?data=${item.id}`}
+                  className="btn-kelas"
                   key={index}
                 >
+                  <FontAwesomeIcon icon={faSchool} /> &nbsp;
                   {item.name}
                 </Link>
               ))}
@@ -271,23 +276,30 @@ const Home = () => {
           <br />
           {/* MAPEL */}
           <div className="parent-title-kota">
-            <h3 className="title-jangkauan-kota">
-              Pilihan Mata Pelajaran
-            </h3>
+            <h3 className="title-jangkauan-kota">Pilihan Mata Pelajaran</h3>
             <p className="desk-jangkauan-kota">
               Edumatrix Indonesia menyediakan pilihan program belajar terlengkap
               yang bisa disesuaikan dengan kelas/tingkatan setiap siswa.
               Pilihlah program belajar yang paling sesuai dengan kebutuhan dan
               tujuan belajarmu.
             </p>
-            <div className="parent-list-kota">
+            <div className="parent-list-mapel">
               {mapel.map((item, index) => (
                 <Link
-                  to={`mata-pelajaran/${item.name.toLowerCase()}?data=${item.id}`}
-                  className="btn-kota"
+                  to={`mata-pelajaran/${item.name.toLowerCase()}?data=${
+                    item.id
+                  }`}
+                  className="btn-mapel"
                   key={index}
                 >
-                  {item.name}
+                  <div className="combine-icon-text">
+                    <img
+                      className="icon-mapel"
+                      src={"http://localhost:8000/images/" + item.image}
+                      alt=""
+                    />
+                    {item.name}
+                  </div>
                 </Link>
               ))}
             </div>
@@ -331,22 +343,29 @@ const Home = () => {
                 Nasional dan Internasional
               </p>
               <div className="parent-card-asalsekolah">
-                {sekolahSiswa.map((item, index) => (
-                  <div key={index} className="marquee">
-                    <div className="track">
-                      <div className="content">
-                        <img
-                          className="logo-school"
-                          src={"http://localhost:8000/images/" + item.image}
-                          alt=""
-                        />
-                      </div>
+                <div className="marquee">
+                  <div className="track">
+                    <div className="content">
+                      <img className="logo-school" src={sekolah1} alt="" />	&nbsp;&nbsp;
+                      <img className="logo-school" src={sekolah1} alt="" />
                     </div>
                   </div>
-                ))}
+                </div>
+              </div>
+              {/* --- */}
+              <div className="parent-card-asalsekolah">
+                <div className="marquee2">
+                  <div className="track2">
+                    <div className="content">
+                      <img className="logo-school" src={sekolah2} alt="" /> 	&nbsp;&nbsp;
+                      <img className="logo-school" src={sekolah2} alt="" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <Faq />
         </div>
         <Footer />
       </div>

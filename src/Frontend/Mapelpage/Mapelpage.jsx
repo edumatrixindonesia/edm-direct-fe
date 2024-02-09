@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 
 const Mapelpage = () => {
   const [name, setName] = useState([]);
-  const [lokasi, setLokasi] = useState([]);
+  const [promo, setPromo] = useState([]);
   const { id } = useParams();
   const [token, setToken] = useState("");
 
@@ -41,6 +41,7 @@ const Mapelpage = () => {
       );
       setName(response.data);
     };
+    
     console.log(id);
     getMapel(id);
     // fetchKota()
