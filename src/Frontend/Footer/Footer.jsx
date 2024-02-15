@@ -1,15 +1,17 @@
 import React from "react";
 import "./Footer.css";
 import logo from "../../asset/logo edm.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFire } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
     <div className="pg-bawah">
       <footer className="bawah">
         <div className="parent-line">
-          <hr className="garis-end-2" />
+          {/* <hr className="garis-end-2" /> */}
         </div>
-        <svg
+        {/* <svg
           className="bawah-wave-svg"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 100"
@@ -19,20 +21,20 @@ const Footer = () => {
             className="bawah-wave-path"
             d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
           />
-        </svg>
+        </svg> */}
         <div className="bawah-content">
           <div className="bawah-content-column">
             <div className="bawah-logo">
               <a className="bawah-logo-link" href="#">
                 <span className="hidden-link-text"></span>
-                <img className="logo-bawah" src={logo} alt="" />
+                <img className="logo-bawah" src="https://edumatrix-education.vercel.app/static/media/logo_edm.d190f8a81fb23ea9ea9b.png" alt="" />
               </a>
             </div>
             <div className="bawah-menu">
               <h2 className="bawah-menu-name">Edumatrix Indonesia</h2>
               <ul id="menu-get-started" className="bawah-menu-list">
                 <li className="menu-item menu-item-type-post_type menu-item-object-product">
-                  <a href="#">Ruko Permai Monjali</a>
+                  <a className="link-footer" href="#">Ruko Permai Monjali</a>
                   <p className="p-address">
                     Jalan Monjali No 3, Kutu Dukuh, Sinduadi, Mlati, Sleman,
                     Yogyakarta 55241
@@ -76,24 +78,24 @@ const Footer = () => {
               <h2 className="bawah-menu-name"> Konsultasi Program</h2>
               <ul id="menu-company" className="bawah-menu-list">
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">0821-7414-4728 (Kak Iva)</a>
+                  <a className="link-footer" href="">0821-7414-4728 (Kak Iva)</a>
                 </li>
                 <li className="menu-item menu-item-type-taxonomy menu-item-object-category">
-                  <a href="#">0812-1636-5729 (Kak Nia)</a>
+                  <a className="link-footer" href="">0812-1636-5729 (Kak Nia)</a>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">0812-1552-3902 (Kak Eka)</a>
+                  <a className="link-footer" href="">0812-1552-3902 (Kak Eka)</a>
                 </li>
               </ul>
             </div>
             <div className="bawah-menu">
-              <h2 className="bawah-menu-name"> Legal</h2>
+              <h2 className="bawah-menu-name"> Lainnya</h2>
               <ul id="menu-legal" className="bawah-menu-list">
                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434">
-                  <a href="#">Privacy Notice</a>
+                  <a className="link-footer" href="">Bimbel TNI - Polri <span className="hot-program">HOTS <FontAwesomeIcon icon={faFire} /></span></a>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Terms of Use</a>
+                  <a className="link-footer" href="">Bimbel SNBT <span className="hot-program">HOTS <FontAwesomeIcon icon={faFire} /></span></a>
                 </li>
               </ul>
             </div>
@@ -103,20 +105,20 @@ const Footer = () => {
               <h2 className="bawah-menu-name">other websites</h2>
               <ul id="menu-quick-links" className="bawah-menu-list">
                 <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                  <a target="_blank" rel="noopener noreferrer" href="https://edumatrix-indonesia.com">
+                  <a target="_blank" rel="noopener noreferrer" className="link-footer" href="https://edumatrix-indonesia.com">
                     EDUMATRIX-INDONESIA.COM
                   </a>
                 </li>
                 <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                  <a target="_blank" rel="noopener noreferrer" href="https://bimbelsnbt.com">
+                  <a target="_blank" rel="noopener noreferrer" className="link-footer" href="https://bimbelsnbt.com">
                     BIMBELSNBT.COM
                   </a>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="https://masterclass.co.id">MASTERCLASS.CO.ID</a>
+                  <a className="link-footer" href="https://masterclass.co.id">MASTERCLASS.CO.ID</a>
                 </li>
                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="https://bimbel-kedokteran.co.id">BIMBEL-KEDOKTERAN.CO.ID</a>
+                  <a className="link-footer" href="https://bimbel-kedokteran.co.id">BIMBEL-KEDOKTERAN.CO.ID</a>
                 </li>
               </ul>
             </div>
@@ -130,7 +132,7 @@ const Footer = () => {
               </p>
               <a
                 className="bawah-call-to-action-button button"
-                href="#"
+                href=""
                 target="_self"
               >
                 {" "}
@@ -153,13 +155,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="parent-line">
+        {/* <div className="parent-line">
           <hr className="garis-end-2" />
-        </div>
+        </div> */}
         <div className="bawah-copyright">
           <div className="bawah-copyright-wrapper">
             <p className="bawah-copyright-text">
-              <a className="bawah-copyright-link" href="#" target="_self">
+              <a className="bawah-copyright-link" href="" target="_self">
                 ©2024. | CV. Edukasi Prima Indonesia | All rights reserved.{" "}
               </a>
             </p>

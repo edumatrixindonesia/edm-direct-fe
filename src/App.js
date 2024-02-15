@@ -49,6 +49,12 @@ import AddKelasperKota from "./components/CrudKelasperKota/AddKelasperKota";
 import Kelaspage from "./Frontend/Kelaspage/Kelaspage";
 import Mapelpage from "./Frontend/Mapelpage/Mapelpage";
 import Kotapage from "./Frontend/Kotapage/kotaPage";
+import errorPage from "./Frontend/Errorpage/Page404";
+import Page404 from "./Frontend/Errorpage/Page404";
+import ListTestimoni from "./components/ListTestimoni/ListTestimoni";
+import AddTestimoni from "./components/CrudTestimoni/AddTestimoni";
+import EditTestimoni from "./components/CrudTestimoni/EditTestimoni";
+import ListGuru from "./components/ListGuru/ListGuru";
 
 function App() {
   return (
@@ -74,6 +80,8 @@ function App() {
         <Route path="/dashboard/listfiturprogram" element={<ListFiturProgram />}></Route>
         <Route path="/dashboard/listpromo" element={<ListPromo />}></Route>
         <Route path="/dashboard/listkelasperkota" element={<ListKelasperKota />}></Route>
+        <Route path="/dashboard/listtestimoni" element={<ListTestimoni />}></Route>
+        <Route path="/dashboard/listguru" element={<ListGuru />}></Route>
         {/* Add Admin */}
         <Route path="/addcontact" element={<AddUser />}></Route>
         <Route path="/addprogram" element={<AddProgram />}></Route>
@@ -90,6 +98,7 @@ function App() {
         <Route path="/addfiturprogram" element={<AddFiturProgram />}></Route>
         <Route path="/addpromo" element={<AddPromo />}></Route>
         <Route path="/addkelasperkota" element={<AddKelasperKota />}></Route>
+        <Route path="/addtestimoni" element={<AddTestimoni />}></Route>
         {/* Edit Admin */}
         <Route path="/edit-whatsapp/:id" element={<EditContact />}></Route>
         <Route path="/edit-program/:id" element={<EditProgram />}></Route>
@@ -104,6 +113,7 @@ function App() {
         <Route path="/edit-pilihanprogram/:id" element={<EditPilihanProgram />}></Route>
         <Route path="/edit-fiturprogram/:id" element={<EditFiturProgram />}></Route>
         <Route path="/edit-promo/:id" element={<EditPromo />}></Route>
+        <Route path="/edit-testimoni/:id" element={<EditTestimoni />}></Route>
         {/* Go City By ID */}
         <Route path="/kota/:id" element={<Kotapage />}></Route>
         {/* Go Class By ID */}
@@ -111,7 +121,9 @@ function App() {
         {/* Go Mapel By ID */}
         <Route path="/mata-pelajaran/:id" element={<Mapelpage />}></Route>
         {/* Go Kabupaten By ID */}
-        <Route path="/kabupaten/:id"></Route>        
+        <Route path="/kabupaten/:id"></Route>
+        {/* Go to Error page */}
+        <Route path="*" element={<Page404 />}></Route>
       </Routes>
     </BrowserRouter>
   );

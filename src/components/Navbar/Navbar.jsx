@@ -79,6 +79,14 @@ const Navbar = () => {
     navigate("/dashboard/listkelasperkota")
   }
 
+  const goToTestimoni = () => {
+    navigate("/dashboard/listtestimoni")
+  }
+
+  const goToGuru = () => {
+    navigate("/dashboard/listguru")
+  }
+
   const Logout = async () => {
     try {
       await axios.delete("http://localhost:8000/logout");
@@ -87,6 +95,7 @@ const Navbar = () => {
       console.log(error);
     }
   };
+
   return (
     <div className="s-layout">
       {/* Sidebar */}
@@ -138,7 +147,7 @@ const Navbar = () => {
                 <em className="em-style">Promo</em>
               </a>
             </li>
-            <li>
+            <li onClick={() => goToGuru()}>
               <a className="s-sidebar__nav-link">
                 <em className="em-style">Guru</em>
               </a>
@@ -188,7 +197,7 @@ const Navbar = () => {
                 <em className="em-style">Asal Sekolah</em>
               </a>
             </li>
-            <li>
+            <li onClick={() => goToTestimoni()}>
               <a className="s-sidebar__nav-link">
                 <em className="em-style">Testimoni</em>
               </a>

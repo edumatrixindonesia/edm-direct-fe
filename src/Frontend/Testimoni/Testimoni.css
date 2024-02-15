@@ -1,0 +1,101 @@
+.parent-box-card {
+  padding: 20px;
+  /* padding-top: 0; */
+  padding-right: 10px;
+  padding-left: 35px;
+  width: 100%;
+  background: rgb(0, 143, 193);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 143, 193, 1) 0%,
+    rgba(5, 70, 154, 1) 100%
+  );
+  border-radius: 25px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-card-testi {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  height: 45vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 20px;
+  overflow: "hidden";
+  padding: 5rem 0;
+}
+
+.img-slider {
+  width: 50%;
+  border-radius: 100%;
+  margin-top: -28%;
+  border: 3px solid white;
+}
+.star-5 {
+  margin-top: 0 !important;
+  width: 50%;
+}
+.petik-quot {
+  display: flex;
+  justify-content: center;
+}
+.icon-quote {
+  color: #05469a;
+  font-size: 25px;
+}
+.parent-teks-testi {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+}
+.judul-testimoni {
+  font-weight: 400;
+}
+.desk-testi {
+  font-weight: 300;
+}
+.star-testi {
+  color: gold;
+}
+
+/* .react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
+} */
+
+.custom-dot-list-style button {
+  border: none;
+  background: rgb(219, 219, 219);
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+  background: rgba(5, 70, 154, 1) !important;
+}
+
+@media only screen and (max-width: 414px) {
+  .parent-box-card {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .main-card-testi {
+    height: 50vh;
+  }
+  .parent-teks-testi {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    font-size: 20px;
+  }
+  .star-testi {
+    font-size: 40px;
+    color: gold;
+  }
+}

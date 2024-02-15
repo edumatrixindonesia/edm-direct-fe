@@ -10,6 +10,8 @@ import Footer from "./Footer/Footer";
 import Faq from "./Faq/Faq";
 import sekolah1 from "../asset/logo sekolah1.png";
 import sekolah2 from "../asset/logo sekolah2.png";
+import Testimoni from "./Testimoni/Testimoni";
+import MasterTeacher from "./MasterTeacher/MasterTeacher";
 // import logosekolah from "../asset/logo sekolah.png"
 
 const Home = () => {
@@ -127,7 +129,7 @@ const Home = () => {
                 </span>
               </h3>
               <p className="p-hero-top">
-                Jasa Les Privat untuk TK, SD, SMP, SMA, UN/AKM, OSN, CPNS, LPDP,
+                Bimbingan Les Privat untuk TK, SD, SMP, SMA, UN/AKM, OSN, CPNS, LPDP,
                 PPDS, SIMAK UI, SNBT, AKPOL, AKMIL, Kedinasan, Mahasiswa dan
                 Karyawan. Dapatkan layanan Les Privat kapan pun dan dimana pun
                 dengan lebih dari 5.000 Master Teacher Edumatrix yang siap
@@ -147,10 +149,10 @@ const Home = () => {
                   <button className="join-btn">Gabung Kelas</button>
                 </div>
               </div>
-              <p className="text-diliput">diliput oleh :</p>
+              {/* <p className="text-diliput">diliput oleh :</p> */}
             </div>
             <div className="parent-img">
-              <img src={model} alt="" />
+              <img className="image-model" src={model} alt="" />
             </div>
           </div>
         </div>
@@ -219,6 +221,7 @@ const Home = () => {
                 ))
             )}
           </div>
+          <MasterTeacher/>
         </div>
 
         <div className="container-kota">
@@ -235,14 +238,15 @@ const Home = () => {
             </p>
             <div className="parent-list-kota">
               {kota.map((item, index) => (
-                <Link
-                  to={`kota/${item.kota.toLowerCase()}?data=${item.id}`}
-                  className="btn-kota"
-                  key={index}
-                >
-                  <FontAwesomeIcon icon={faCity} /> &nbsp;
-                  {item.kota}
-                </Link>
+                  <Link
+                    to={`kota/${item.kota.toLowerCase()}?data=${item.id}`}
+                    className="btn-kota"
+                    key={index}
+                  >
+                    {/* <img className="image-city" src={"http://localhost:8000/images/" + item.image} alt="" />&nbsp; */}
+                    <FontAwesomeIcon icon={faCity} /> &nbsp;
+                    {item.kota}
+                  </Link>
               ))}
             </div>
           </div>
@@ -251,7 +255,7 @@ const Home = () => {
           {/* KELAS */}
           <div className="parent-title-kota">
             <h3 className="title-jangkauan-kota">
-              Program di Edumatrix Indonesia
+              Program Belajar di Edumatrix
             </h3>
             <p className="desk-jangkauan-kota">
               Edumatrix Indonesia menyediakan pilihan program belajar terlengkap
@@ -346,7 +350,8 @@ const Home = () => {
                 <div className="marquee">
                   <div className="track">
                     <div className="content">
-                      <img className="logo-school" src={sekolah1} alt="" />	&nbsp;&nbsp;
+                      <img className="logo-school" src={sekolah1} alt="" />{" "}
+                      &nbsp;&nbsp;
                       <img className="logo-school" src={sekolah1} alt="" />
                     </div>
                   </div>
@@ -357,12 +362,14 @@ const Home = () => {
                 <div className="marquee2">
                   <div className="track2">
                     <div className="content">
-                      <img className="logo-school" src={sekolah2} alt="" /> 	&nbsp;&nbsp;
+                      <img className="logo-school" src={sekolah2} alt="" />{" "}
+                      &nbsp;&nbsp;
                       <img className="logo-school" src={sekolah2} alt="" />
                     </div>
                   </div>
                 </div>
               </div>
+              <Testimoni />
             </div>
           </div>
           <Faq />

@@ -1,33 +1,14 @@
 import React, { useState } from "react";
-import "./Topbar.css";
+import "./TopBar.css";
 import { useNavigate } from "react-router-dom";
 import logo from "../asset/logo edm.jpg"
 
 const Topbar = () => {
-//   const dispatch = useNavigate();
-//   const navigate = useNavigate();
-
-//   const [show, setShow] = useState(true);
-
-//   const goToLogin = () => {
-//     navigate("/Login");
-//   };
-
-//   const goToDaftar = () => {
-//     navigate("/Daftar");
-//   };
-
-//   const goToKelas = () => {
-//     navigate("/Kelas");
-//   };
-//   const goToProgram = () => {
-//     navigate("/Program");
-//   };
 
   return (
     <div className="App">
       <nav className="navbar-nav">
-        <img className="logo" src={logo} alt="" />
+        <img className="logo" src="https://edumatrix-education.vercel.app/static/media/logo_edm.d190f8a81fb23ea9ea9b.png" alt="" />
         <ul className="nav-links">
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" className="hamburger">
@@ -36,7 +17,7 @@ const Topbar = () => {
 
           <div className="menu">
             <li>
-              <a href="/">Beranda</a>
+              <a className="nav-beranda">Beranda</a>
             </li>
             <li className="services">
               <a className="nav-program" onClick={() => goToProgram()}>

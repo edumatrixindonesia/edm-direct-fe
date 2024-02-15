@@ -1,87 +1,163 @@
-body {
-    background: #ffffff;
+/* body {
+  background: #ffffff;
 }
 .accordion {
-    display: flex;
-    flex-direction: column;
-    font-family: "Sora", sans-serif;
-    max-width: 991px;
-    min-width: 320px;
-    margin: 20px auto;
-    padding: 0 50px;
-}
-.text-faq {
-    text-align: center;
-    margin-top: 50px;
-    font-weight: bold;
-    font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Sora", sans-serif;
+  max-width: 991px;
+  min-width: 320px;
+  margin: 20px auto;
+  padding: 0 50px;
 }
 .accordion h1 {
-    font-size: 32px;
-    text-align: center;
+  font-size: 32px;
+  text-align: center;
 }
 .accordion-item {
-    margin-top: 16px;
-    border: 1px solid #9b9b9b;
-    border-radius: 6px;
-    background: #ffffff;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  margin-top: 16px;
+  border: 1px solid #9b9b9b;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 .accordion-item .accordion-item-title {
-    position: relative;
-    margin: 0;
-    display: flex;
-    width: 100%;
-    font-size: 15px;
-    cursor: pointer;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    padding: 14px 20px;
-    box-sizing: border-box;
-    align-items: center;
+  position: relative;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  align-items: center;
 }
 .accordion-item .accordion-item-desc {
-    display: none;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 300;
-    color: #444;
-    border-top: 1px dashed #ddd;
-    padding: 10px 20px 20px;
-    box-sizing: border-box;
+  display: none;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #444;
+  border-top: 1px dashed #ddd;
+  padding: 10px 20px 20px;
+  box-sizing: border-box;
 }
 .accordion-item input[type="checkbox"] {
-    position: absolute;
-    height: 0;
-    width: 0;
-    opacity: 0;
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
 }
 .accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
-    display: block;
+  display: block;
 }
 .accordion-item
-    input[type="checkbox"]:checked
-    ~ .accordion-item-title
-    .icon:after {
-    content: "-";
-    font-size: 20px;
+  input[type="checkbox"]:checked
+  ~ .accordion-item-title
+  .icon:after {
+  content: "-";
+  font-size: 20px;
 }
 .accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
-    content: "+";
-    font-size: 20px;
+  content: "+";
+  font-size: 20px;
 }
 .accordion-item:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 .accordion-item .icon {
-    margin-left: 14px;
+  margin-left: 14px;
 }
 
 @media screen and (max-width: 767px) {
-    .accordion {
-        padding: 0 16px;
-    }
-    .accordion h1 {
-        font-size: 22px;
-    }
+  .accordion {
+    padding: 0 16px;
+  }
+  .accordion h1 {
+    font-size: 22px;
+  }
+} */
+
+.text-faq {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.faq-accordion {
+  width: 50%;
+  margin: 0 auto;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 700px;
+  /* margin-top: 2rem; */
+  /* padding-bottom: 1rem; */
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+.question p {
+  flex: 1;
+}
+
+.garis-faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.child-garis-faq {
+  width: 30%;
+}
+
+.answer {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  /* box-shadow: 10px 10px #8f8073; */
+  max-width: 700px;
+  /* margin-top: 1rem; */
+  display: none;
+}
+
+.answer.open {
+  display: block;
+}
+
+.active {
+  border-bottom: none;
+}
+.parent-all-accordion {
+  display: grid;
+  /* place-items: center; */
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 10px;
+}
+.line-faq {
+  border: 1px dashed rgb(221, 221, 221);
+  margin-top: -10px;
+}
+
+@media screen and (max-width: 767px) {
+  .faq-accordion {
+    width: 100%;
+  }
+  .accordion h1 {
+    font-size: 22px;
+  }
 }

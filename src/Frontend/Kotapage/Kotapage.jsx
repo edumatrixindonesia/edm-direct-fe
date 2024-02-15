@@ -104,12 +104,10 @@ const Kotapage = () => {
         {/* KABUPATEN */}
         <div className="parent-title-kota">
           <h3 className="title-jangkauan-kota">
-            Edumatrix Ada di Kota - Kota Berikut
+            Bimbel Privat di {name.kota}
           </h3>
           <p className="desk-jangkauan-kota">
-            Edumatrix Indonesia memberikan layanan belajar terbaik sekaligus
-            terdekat yang disesuaikan dengan lokasi siswa di seluruh Indonesia.
-            Pilihlah layanan belajar Edumatrix yang terdekat dari kotamu:
+          Berbagai wilayah di {name.kota} yang dijangkau oleh layanan Edumatrix Indonesia antara lain::
           </p>
           <div className="parent-list-kota">
             {kabupaten.map((item, index) => (

@@ -5,22 +5,28 @@
 }
 /* NAVBAR STYLING STARTS */
 .navbar-nav {
-  /* position: fixed;
-  top: 0; */
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #ffffff;
-  color: #000000;
+  /* background-color: #05469a; */
+  background: rgb(0, 143, 193);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 143, 193, 1) 0%,
+    rgba(5, 70, 154, 1) 100%
+  );
+  color: #ffffff;
   padding-left: 15%;
   padding-right: 15%;
-  box-shadow: rgba(130, 130, 130, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(130, 130, 130, 0.24) 0px 3px 8px; */
   z-index: 99;
   width: 100%;
 }
 .nav-links a {
-  color: #000000;
+  color: #ffffff;
   font-family: "Lexend", sans-serif;
 }
 /* LOGO */
@@ -62,9 +68,9 @@
   width: 8em;
   text-align: center;
 }
-.dropdown li:hover {
-  background-color: #4334;
-}
+/* .dropdown li:hover {
+  background-color: rgba(148, 115, 115, 0.267);
+} */
 .services:hover .dropdown {
   display: block;
 }
@@ -95,8 +101,8 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 .btn-daftar {
-  background-color: #00357a;
-  border: 1px solid white;
+  background-color: #05469a;
+  border: 1px solid transparent;
   color: white;
   padding: 10px;
   font-family: "Lexend", sans-serif;
@@ -109,18 +115,23 @@ input[type="checkbox"] {
   padding-left: 20px;
   padding-right: 20px;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .nav-kelas {
   cursor: pointer;
 }
-.nav-kelas:hover {
-  text-decoration: underline;
-}
 .nav-program {
   cursor: pointer;
+  color: white;
 }
 .nav-program:hover {
-  text-decoration: underline;
+  color: white;
+}
+.nav-kelas:hover {
+  color: white;
+}
+.nav-beranda:hover {
+  color: white;
 }
 
 /* APPLYING MEDIA QUERIES */
@@ -128,10 +139,11 @@ input[type="checkbox"] {
   .menu {
     display: none;
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
+    color: black;
     right: 0;
     left: 0;
-    top: 3rem;
+    top: 3.5rem;
     text-align: center;
     padding: 16px 0;
     height: 100vh;
@@ -142,7 +154,7 @@ input[type="checkbox"] {
     background-color: #ffffff;
     transition: 0.3s ease;
     background-color: #00357a;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 3px;
   }
   .menu li {
@@ -156,10 +168,10 @@ input[type="checkbox"] {
 
   .hamburger {
     display: block;
-    transition: 1s;
+    transition: 10s;
   }
   .hamburger:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transition: color;
     transition-delay: 200ms;
   }
@@ -173,5 +185,8 @@ input[type="checkbox"] {
   }
   .logo {
     width: 40%;
+  }
+  .nav-kelas, .nav-program, .nav-beranda {
+    color: black !important;
   }
 }
